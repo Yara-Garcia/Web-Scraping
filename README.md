@@ -17,7 +17,7 @@ Este código foi desenvolvido para ser executado diretamente no console do naveg
 5. Clique em 'Console';
 6. Cole o código copiado e pressione 'Enter';
 
-<img src="https://i.imgur.com/5HBpQOl.jpg"/>
+<img src="https://raw.githubusercontent.com/Yara-Garcia/Web-Scraping/main/print-webScraping.png>
 
 
 
