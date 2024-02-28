@@ -17,7 +17,7 @@ Este código foi desenvolvido para ser executado diretamente no console do naveg
 5. Clique em 'Console';
 6. Cole o código copiado e pressione 'Enter';
 
-<a href="https://imgur.com/a/5HBpQOl"><img src="//s.imgur.com/min/embed.js"/></a>
+<img src="https://i.imgur.com/5HBpQOl.jpg"/>
 
 
 
