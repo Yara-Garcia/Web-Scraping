@@ -18,6 +18,18 @@ const extrairInformacoesDoAlimento = () => {
 
         const ingredientes = extrairTexto(document.querySelector('.panel_text'));
 
+        const categorias = extrairTexto(document.querySelector('#field_categories_value'));
+
+        const localDeFabricacao = extrairTexto(document.querySelector('#field_manufacturing_places_value'));
+
+        const nutriScoreLetra = document.querySelector('.grade_e_title').innerText;
+        const nutriScoreClassificacao = document.querySelector('.grade_e_title').nextSibling.innerText;
+        const nutriScore = (nutriScoreLetra && nutriScoreClassificacao) ? `${nutriScoreLetra} (${nutriScoreClassificacao})` : 'Informação não disponível';
+
+        const classificacaoNova = extrairTexto(document.querySelector('#panel_nova'));
+
+        const ecoScore = extrairTexto(document.querySelector('#panel_ecoscore'));
+
         const alimento = {
             nomeDoAlimento,
             codigoDeBarras,
@@ -25,7 +37,11 @@ const extrairInformacoesDoAlimento = () => {
             quantidade,
             embalagem,
             ingredientes,
-
+            categorias,
+            localDeFabricacao,
+            nutriScore,
+            classificacaoNova,
+            ecoScore
         }
 
         console.log(alimento);
