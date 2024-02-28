@@ -28,7 +28,7 @@ const extrairInformacoesDoAlimento = () => {
 
         const ecoScore = extrairTexto(document.querySelector('#panel_ecoscore'));
 
-        const alimento = {
+        const informacoesDoAlimento = {
             nomeDoAlimento,
             codigoDeBarras,
             marca,
@@ -41,7 +41,8 @@ const extrairInformacoesDoAlimento = () => {
             ecoScore
         }
 
-        console.log(JSON.stringify(alimento, null, 2));
+        console.log(JSON.stringify(informacoesDoAlimento, null, 2));
+
     } catch (error) {
         console.error('Ocorreu um erro:', error.message);
     }
