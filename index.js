@@ -18,8 +18,6 @@ const extrairInformacoesDoAlimento = () => {
 
         const ingredientes = extrairTexto(document.querySelector('.panel_text'));
 
-        const categorias = extrairTexto(document.querySelector('#field_categories_value'));
-
         const localDeFabricacao = extrairTexto(document.querySelector('#field_manufacturing_places_value'));
 
         const nutriScoreLetra = document.querySelector('.grade_e_title').innerText;
@@ -37,14 +35,13 @@ const extrairInformacoesDoAlimento = () => {
             quantidade,
             embalagem,
             ingredientes,
-            categorias,
             localDeFabricacao,
             nutriScore,
             classificacaoNova,
             ecoScore
         }
 
-        console.log(alimento);
+        console.log(JSON.stringify(alimento, null, 2));
     } catch (error) {
         console.error('Ocorreu um erro:', error.message);
     }
