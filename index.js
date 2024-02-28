@@ -3,7 +3,7 @@ const extrairInformacoesDoAlimento = () => {
     try {
 
         const extrairTexto = (texto) => {
-            return texto ? texto.innerText : 'A informação não está disponível';
+            return texto ? texto.innerText.trim() : 'A informação não está disponível';
         }
 
         const nomeDoAlimento = extrairTexto(document.querySelector('.title-1'));
@@ -20,13 +20,13 @@ const extrairInformacoesDoAlimento = () => {
 
         const localDeFabricacao = extrairTexto(document.querySelector('#field_manufacturing_places_value'));
 
-        const nutriScoreLetra = document.querySelector('.grade_e_title').innerText;
-        const nutriScoreClassificacao = document.querySelector('.grade_e_title').nextSibling.innerText;
-        const nutriScore = (nutriScoreLetra && nutriScoreClassificacao) ? `${nutriScoreLetra} (${nutriScoreClassificacao})` : 'Informação não disponível';
-
         const classificacaoNova = extrairTexto(document.querySelector('#panel_nova'));
 
         const ecoScore = extrairTexto(document.querySelector('#panel_ecoscore'));
+
+        const nutriScoreLetra = document.querySelector('.grade_e_title').innerText;
+        const nutriScoreClassificacao = document.querySelector('.grade_e_title').nextSibling.innerText;
+        const nutriScore = (nutriScoreLetra && nutriScoreClassificacao) ? `${nutriScoreLetra} (${nutriScoreClassificacao})` : 'Informação não disponível';
 
         const informacoesDoAlimento = {
             nomeDoAlimento,
